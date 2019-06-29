@@ -8,10 +8,12 @@ public class Task03 {
         System.out.println(i);
         
         // unrepak автораспаковка
-        Integer i1 = Integer.valueOf("42");
+        Integer y = Integer.valueOf("567");
+        Integer x = y;
         //repak автоупаковка
-        i1 = i1+1;
-        System.out.println(i1);
+        y++;
+        System.out.println(x == y);
+        System.out.println(y);
         
     }
     
