@@ -8,14 +8,10 @@ public class Task04 {
         String l = "Loza";
         String w = "woza";
         boolean temp;
-        int a =1;
+        int a =0;
         for (i = 1; i <= 110; i++) {
-            //a++; 
             temp = false;
-            if (a % 11 == 0) {
-                System.out.println();
-            }
-            
+            System.out.print(" ");
             if (i % 3 == 0) {
                 temp = true;
                 System.out.print(c);
@@ -35,8 +31,11 @@ public class Task04 {
             System.out.print(i);
             
             }
+            a++; 
+            if (a % 11 == 0) {
+                System.out.println();
+            }
             
-            System.out.print(" ");
         }
         
     }
