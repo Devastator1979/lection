@@ -8,7 +8,7 @@ public class Task04 {
         String l = "Loza";
         String w = "woza";
         boolean temp;
-        int a =0;
+        int a = 0;
         for (i = 1; i <= 110; i++) {
             temp = false;
             System.out.print(" ");
@@ -21,23 +21,22 @@ public class Task04 {
                 temp = true;
                 System.out.print(l);
             }
-            
+
             if (i % 7 == 0) {
                 temp = true;
                 System.out.print(w);
             }
-            
-            if (temp != true){
-            System.out.print(i);
-            
+
+            if (temp != true) {
+                System.out.print(i);
+
             }
-            a++; 
+            a++;
             if (a % 11 == 0) {
                 System.out.println();
             }
-            
-        }
-        
-    }
-    }
 
+        }
+
+    }
+}
