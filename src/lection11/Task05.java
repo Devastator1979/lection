@@ -7,7 +7,7 @@ class binary{
     int a;
     void b(int a){
         if (a>0)
-        a=
+        a=1;
     }
 }
 public class Task05 {
