@@ -11,14 +11,17 @@ class Bynary {
         for (int mask = 1; mask <= n; mask <<= 1) {
             if ((n & mask) > 0) {
                 System.out.print(1);
+                //Загоняем в строку полученую цифру
                 s = s + "1";
             } else {
                 System.out.print(0);
+                //Загоняем в строку полученую цифру
                 s = s + "0";
             }
         }
         int stringLength = s.length();
         String result = "";
+        //С помощью цикла в обратном порядке переставляем символы строки
         for (int i = 0; i < stringLength; i++) {
             result = s.charAt(i) + result;
         }
