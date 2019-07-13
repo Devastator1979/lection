@@ -39,6 +39,15 @@ public class Task05 {
     public static void main(String[] args) {
         Bynary bin = new Bynary();
         bin.a(255866655);
+        int intArray[]; 
+        //int intArray[] = null;
+        intArray[0]=1;
+        intArray[1]=1;
+        intArray[2]=1;
+        intArray[3]=6;
+        for (int i = 0; i < intArray.length; i++)
+        System.out.println("Element at index " + i + " : "+ intArray[i]);
+            }
         
     }
 }
