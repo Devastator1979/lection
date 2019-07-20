@@ -1,3 +1,4 @@
+//Любая цепочка с вызовом this должна заканчиваться вызовом конструктора super
 package lection13;
 
 class Vector {
