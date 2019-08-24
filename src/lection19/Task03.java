@@ -13,6 +13,7 @@ class Sell{
         this.busy = busy;
               
     }
+    @Override
     public boolean equals(Object o){
         if ((o instanceof Sell)&&(this.number == ((Sell)o).number)
                 && (this.symbol == ((Sell)o).symbol)
