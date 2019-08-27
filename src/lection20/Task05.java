@@ -1,3 +1,4 @@
+//Делегирование
 package lection20;
 class SpaseShipControl{
     void up (int velocity){}
