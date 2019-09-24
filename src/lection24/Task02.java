@@ -8,7 +8,7 @@ package lection24;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-import static java.lang.Math.random;
+//import static java.lang.Math.random;
 
 class Field{
     int field [][] = new int [10][10];
