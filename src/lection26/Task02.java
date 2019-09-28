@@ -13,6 +13,10 @@ class AsociativArray{
             }
         }
     }
+    int getread(String key){
+        
+        return value;
+    }
     
 }
 public class Task02 {
