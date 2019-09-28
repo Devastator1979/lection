@@ -47,6 +47,7 @@ public class Task01 {
             foo(n);
             //System.out.println("10/n= " + (10/n));
             System.out.println("After resaults output");
+            throw new RuntimeException();
         }
         catch(ArithmeticException ae){
             System.out.println("From Arithm.Exc.catch:" + ae);
@@ -56,6 +57,9 @@ public class Task01 {
         }
         catch(NumberFormatException  nfe){
             System.out.println("From Number format Exe.catch:" + nfe);
+        }
+        catch(Throwable ex){
+            System.out.println("Universal Cath: " + ex);
         }
         finally{
         System.out.println("From finally");
