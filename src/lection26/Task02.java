@@ -29,7 +29,6 @@ class AsociativArray{
             if(keyArray[i]!=null){
                 System.out.print(keyArray[i] + " ");
                 System.out.println(valueArray[i] + " ");
-                //break;
             }
         }
     }
