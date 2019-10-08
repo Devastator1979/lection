@@ -4,35 +4,64 @@ class Node{
     int date;
 }
 class List{
-    String head;
-    void add (int date, Node head){
+    Node head = null;
+    void add (int date){
+        Node kursor = head;
+        if (head==null){
+            head = new Node();
+            head.date=date;
+        }
+        else{
+            while(kursor.ref!=null){
+                kursor = kursor.ref;
+            }
+            Node n = new Node();
+            n.ref = null;
+            n.date = date;
+            kursor.ref = n;
+        }     
+    }
+    void add (int date, int index){
+        Node kursor = head;
+        if (index>lenght()){
+            System.out.println("Вы вышли за рамки массива");
+        }
+        else{
+            while(kursor.ref!=null){
+                kursor = kursor.ref;
+            }
+            Node n = new Node();
+            n.ref = null;
+            n.date = date;
+            kursor.ref = n;
+        }     
+    }
+    void print(){
         Node kursor = head;
         while(kursor.ref!=null){
+            System.out.print(kursor.ref + " " + kursor.date + " --> ");
             kursor = kursor.ref;
         }
-        Node n = new Node();
-        n.ref = null;
-        n.date = date;
-        kursor.ref = n;
+        System.out.println(kursor.ref + " " + kursor.date + " ");
     }
-    void print(Node head){
+     int lenght(){
         Node kursor = head;
+        int p = 0; 
         while(kursor.ref!=null){
-            System.out.println(kursor.date);
-            kursor = kursor.ref;
+         p++;
+         kursor = kursor.ref;
         }
-        System.out.println(kursor.date);
-    }
+        p++;
+        return p;
+     }
 }
 public class Task02 {
     public static void main(String args[]){
         List l = new List();
-        Node n1 = new Node();
-        l.add(35,n1);
-        l.add(48,n1);
-        l.add(54,n1);
-        l.print(n1);
-        
-        
+        l.add(35);
+        l.add(48);
+        l.add(54);
+        //l.print();
+        System.out.println(l.lenght());
     }   
 }
