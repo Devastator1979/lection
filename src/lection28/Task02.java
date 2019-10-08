@@ -1,3 +1,4 @@
+//Односвязный список
 package lection28;
 
 class Node {
@@ -51,7 +52,19 @@ class List {
         }
         return true;
     }
-
+    boolean remove(){
+        Node kursor = head;
+        int i = 0;
+        while (i<lenght()-2) {   
+            kursor = kursor.ref;
+            i++;
+        }
+        kursor.ref =null;
+        return true;
+    }
+    boolean remove(int index){
+        return remove();
+    }
     void print() {
         Node kursor = head;
         while (kursor.ref != null) {
@@ -82,6 +95,8 @@ public class Task02 {
         l.add(54);
         l.add(53, 0);
         l.print();
-        System.out.println(l.lenght());
+        l.remove();
+        l.print();
+        //System.out.println(l.lenght());
     }
 }
