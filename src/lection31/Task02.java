@@ -19,7 +19,7 @@ class Dog extends Animal{
 }
 public class Task02 {
     public static void main(String arg[]){
-        Dog d = new Dog();
-        d.findAndEat();
+      //  Dog d = new Dog();
+      // d.findAndEat();
     }
 }

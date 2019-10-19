@@ -22,7 +22,8 @@ public class Task06 {
             Dog1 d2 = i3.next();
             System.out.println(d2.name);
         }
-        for(Dog1 x : d )
+        for(Dog1 x : d ){
             System.out.println(x.name);
+        }
     }
 }
