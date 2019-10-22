@@ -9,6 +9,7 @@ class Dog extends Animal{
     Dog(String aiko) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    @Override
     void eat(){
         System.out.println("Dog eat");
     }

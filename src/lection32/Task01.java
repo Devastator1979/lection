@@ -1,4 +1,7 @@
+//Бинарная вставка
 package lection32;
+
+import java.util.Arrays;
 
 class SortAray {
 
@@ -27,24 +30,30 @@ class SortAray {
     
 
     public int find(int x, int array[]) {
-        int i = -1;
-        if (array != null) {
-            int low = 0, high = array.length, mid;
-            while (low < high) {
-                mid = (low + high) >>> 1;
-                if (high-low<=1) {
-                    i = mid;
-                    break;
-                } else {
-                    if (x < array[mid]) {
-                        high = mid;
-                    } else {
-                        low = mid + 1;
-                    }
-                }
-            }
+        //int i =0;
+        //if (array != null) {
+//            int low = 0, high = array.length, mid;
+//            while (low < high) {
+//                mid = (low + high) >>> 1;
+//                if (high-low<=1) {
+//                    i = mid;
+//                    break;
+//                } else {
+//                    if (x < array[mid]) {
+//                        high = mid;
+//                    } else {
+//                        low = mid + 1;
+//                    }
+//                }
+//            }
+        int i = Arrays.binarySearch(array, x);
+        if (i>0){
+            return i;
         }
-        return i+1;
+        else{
+            return Math.abs(i)-1;
+        }
+        
     }
 public void newArray(){
    // int i ;
@@ -65,8 +74,20 @@ public class Task01 {
         ar.print(array);
         ar.Sort(array);
         ar.print(array);
-        ar.find(199, array);
-        System.out.println(ar.find(199, array));
+        //ar.find(199, array);
+        int array3[] = new int [array.length+1];
+        int ind = ar.find(199, array);
+        for(int i = 0;i<array.length;i++){
+            if(i<ind){
+                array3[i]=array[i];
+            }
+            else{
+                array3[i+1]=array[i];
+            }
+        }
+        array3[ind]=199;
+        for(int i:array3)
+        System.out.print(i+ ", ");
         
 
     }
