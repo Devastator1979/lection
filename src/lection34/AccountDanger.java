@@ -28,15 +28,20 @@ public class AccountDanger implements Runnable{
 //            }
 //        }
 //    }
-    public void makeWithdrawal(int amt){
-        Account acct = new Account();
-        if(acct.getBalance()>=amt){
-            System.out.println(Thread.currentThread().getName() + " is going to withdraw");
-            acct.withdraw(amt);
-            System.out.println(Thread.currentThread().getName() + " completes the withdrawal");
-        }
-        else{
-            System.out.println("Not enough in account for " + Thread.currentThread().getName() + " to withdraw" + acct.getBalance());
-        }
+//        public void makeWithdrawal(int amt){
+//            Account acct = new Account();
+//            if(acct.getBalance()>=amt){
+//                System.out.println(Thread.currentThread().getName() + " is going to withdraw");
+//                acct.withdraw(amt);
+//                System.out.println(Thread.currentThread().getName() + " completes the withdrawal");
+//            }
+//            else{
+//                System.out.println("Not enough in account for " + Thread.currentThread().getName() + " to withdraw" + acct.getBalance());
+//            }
+//        }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
