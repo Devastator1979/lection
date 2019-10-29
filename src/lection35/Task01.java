@@ -17,9 +17,9 @@ public class Task01 {
         }
     }
     public static void classMethod(){
-        Class cl=null;
+        Class cl = null;
         try {
-            cl=Class.forName("Task01");
+            cl = Class.forName("Task01");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Task01.class.getName()).log(Level.SEVERE, null, ex);
         }
