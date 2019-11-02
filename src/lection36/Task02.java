@@ -26,7 +26,7 @@ public class Task02 {
         synchronized(b){
             try {
                 System.out.println("Waiting for b to complete...");
-                wait();
+                b.wait();
             }
             catch(InterruptedException e){
                 
