@@ -30,7 +30,7 @@ class DeadlockRisk{
             }
         }
     }
-    class PotokB implements Runnable{
+class PotokB implements Runnable{
         public void run(){
             for (int i=0;i<10000;i++){
                 write(5,10);
