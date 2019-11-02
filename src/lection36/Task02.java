@@ -2,17 +2,26 @@
 package lection36;
 
 //import static java.lang.Thread.sleep;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
 
 class ThreadB extends Thread{
     int total;
     public void run(){
-        synchronized(this){
-            for (int i =0; i<1; i++){
-                total += i;
+        try {
+            sleep(1000);
+            synchronized(this){
+                for (int i =0; i<1; i++){
+                    total += i;
+                }
+                notify();
             }
-            notify();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ThreadB.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
