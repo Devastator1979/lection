@@ -1,13 +1,8 @@
 //Взаимодействие потоков
 package lection36;
 
-//import static java.lang.Thread.sleep;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
 
 class ThreadB extends Thread{
     int total;
