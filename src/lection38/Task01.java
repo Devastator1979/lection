@@ -3,6 +3,7 @@ package lection38;
 import static java.lang.System.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -16,15 +17,19 @@ public class Task01 {
         String pwd = "admin";
         try {
             Connection conn = DriverManager.getConnection(url, user, pwd);
-            Statement stmt = (Statement) conn.createStatement();
-            String query = "SELECT * FROM Customer";
-            ResultSet rs = stmt.executeQuery(query);
+            String query = "SELECT * FROM customer WHERE FirstName = ?";
+            PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(query);
+            stmt.setString(1, "Pavel");
+//            String q = "INSERT INTO customer (CustomerID, FirstName, LastName, EMail,Phone) VALUES (4,'xxxx','yyyy' ,'zzzz','ttttt')";
+//            int numRows = stmt.executeUpdate(q);
+//            System.out.println(numRows);
+            ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 out.print(rs.getInt("CustomerID") + " ");
                 out.print(rs.getString("FirstName") + " ");
                 out.print(rs.getString("LastName") + " ");
                 out.print(rs.getString("EMail") + " ");
-                out.print(rs.getString("Phone"));
+                out.println(rs.getString("Phone"));
             }
         } catch (SQLException se) {
             System.out.println(se);
